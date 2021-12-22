@@ -130,7 +130,7 @@ public class SchoolRepository implements CrudDao<School> {
                     DB_URL, DB_USER, DB_PASSWORD
             );
             statement = connection.prepareStatement(
-                    "UPDATE school SET first_name=?, last_name=?, birthday=?, birth_place=?, biography=?, is_muggle=? WHERE id=?"
+                    "UPDATE school SET name=?, capacity=?, country=? WHERE id=?"
             );
             statement.setString(1, school.getName());
             statement.setLong(2, school.getCapacity());
